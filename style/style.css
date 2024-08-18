@@ -1,0 +1,314 @@
+html {
+       box-sizing: border-box;
+       font-size: 62.5%;
+
+}
+
+*,
+*:after,
+*:before {
+       box-sizing: border-box;
+
+}
+
+:root {
+       --bgcolor:#ffffffbd;
+       --blue: rgb(17 125 255);
+       --red: rgb(255, 28, 28);
+       --white: white;
+       --perple: rgb(105, 0, 252);
+       --black: black;
+       --Cocogoose_trial: 'Cocogoose_trial';
+       --shabnam: shabnam;
+       --boxshadow : 0 0 32px -6px #004cffbc;
+
+}
+
+@font-face {
+       font-family: shabnam;
+       src: url(../fonts/Shabnam-FD.woff2) format("truetype");
+}
+
+@font-face {
+       font-family: 'Cocogoose_trial';
+       src: url(../fonts/Cocogoose_trial.otf)format("truetype");
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+       margin: 0;
+       padding: 0;
+       border: 0;
+       font-size: 100%;
+       font: inherit;
+       vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+       display: block;
+}
+
+body {
+       line-height: 1;
+}
+
+ol,
+ul {
+       list-style: none;
+}
+
+blockquote,
+q {
+       quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+       content: '';
+       content: none;
+}
+
+table {
+       border-collapse: collapse;
+       border-spacing: 0;
+}
+
+
+body {
+       background: var(--white);
+}
+
+.container {
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       text-align: center;
+       /* background-color: black;       */
+       padding-left: 1rem;
+       padding-right: 1rem;
+       margin: 0 auto;
+
+}
+
+.form {
+
+       display: flex;
+
+       flex-direction: column;
+       background-color: var(--bgcolor);
+       border-radius: 3rem;
+       max-width: 24rem;
+       height: 100%;
+       margin-top: 10rem;
+       padding: 1rem;
+       backdrop-filter: blur(3rem);
+       box-shadow:var(--boxshadow);
+
+}
+
+.nav__text {
+       font-family: var(--Cocogoose_trial);
+       margin-top: 1rem;
+       margin-bottom: 2rem;
+
+}
+
+input {
+       /* margin: 0rem 2rem 2rem 0rem; */
+       width: 15rem;
+       border-radius: 0.8rem;
+       height: 2.5rem;
+       border: 0;
+      box-shadow: var(--boxshadow);
+
+
+
+       /* accent-color: var(--blue); */
+
+
+}
+
+input:focus {
+       outline: var(--perple) solid;
+
+}
+
+.main__input_container {
+       position: relative;
+       margin: 1rem;
+
+}
+
+.button_footer {
+       margin: 1rem;
+
+}
+
+.btn {
+
+       width: min(15rem, 75%);
+       /* height: 2rem; */
+       font-family: var(--Cocogoose_trial);
+       height: 2rem;
+       border: 0px;
+       border-radius: 0.5rem;
+       background-color: var(--blue);
+       box-shadow: var(--boxshadow);
+       color: var(--white);
+       height: 2.5rem;
+
+}
+
+.btn:hover {
+       background-color: var(--white);
+       color: var(--black);
+}
+
+.name__span__tag {
+       position: absolute;
+       background: var(--white);
+       transform: translateX(1rem) translateY(-3rem);
+       font-family: var(--shabnam);
+       font-size: 0.8rem;
+       margin: 0 0.8rem;
+       display: block;
+}
+
+.footer__text {
+       display: block;
+       margin: 1rem;
+       font-family: var(--shabnam);
+}
+
+/* /////////////////table code///////////// */
+
+
+table {
+       margin-top: 3rem;
+       font-family: sans-serif;
+
+       th,
+       td {
+              padding: .25em .5em;
+              text-align: left;
+
+              &:nth-child(2) {
+                     text-align: right;
+              }
+       }
+
+       td {
+              background-color: #eee;
+       }
+
+       th {
+              background-color: #009;
+              color: #fff;
+       }
+}
+
+.zigzag {
+       border-collapse: separate;
+       border-spacing: .25em 1em;
+
+       tbody tr:nth-child(odd) {
+              transform: rotate(2deg);
+       }
+
+       thead tr,
+       tbody tr:nth-child(even) {
+              transform: rotate(-2deg);
+       }
+}
